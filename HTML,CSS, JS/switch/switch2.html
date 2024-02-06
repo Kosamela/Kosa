@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset='UTF-8'/>
+<title>Switch cz2</title>
+</head>
+<body>
+	<p>Podaj liczbe od 1 do 10: 
+	<input type='number' id='liczba'/></br></br>
+	<input type='button' value='Sprawdź' onclick='sprawdzajka()'/></br></br>
+	<b id='napis'/>
+	<script>
+		function sprawdzajka()
+		{
+			var liczba = document.getElementById('liczba').value;
+			liczba = parseInt(liczba);
+			var wynik = liczba % 2;
+			if (liczba <= 10)
+			{
+				switch (wynik)
+				{
+					case 0:
+					document.getElementById('napis').innerHTML = 'Podales parzysta';
+					break;
+					
+					default:
+					document.getElementById('napis').innerHTML = 'Podales nieparzysta';
+				}
+			}
+			else {document.getElementById('napis').innerHTML = 'Podales poza zakresem';}
+		}
+		
+	</script>
+</body>
+</html>

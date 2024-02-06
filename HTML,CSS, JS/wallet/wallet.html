@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+	<meta charset='utf-8'/>
+	<title>Portfel</title>
+	<link rel='stylesheet' href='style.css'/>
+	<script> src='html5.js'</script>
+</head>
+<body>
+	<div class='container'>
+		<noscript>Zezwól na wyświetlanie zawartości</noscript>
+		<p>Podaj sumę na koncie w pln:</p>
+		<input type='number' id='pln'/><br/>
+		<input type='button' value='Pokaż' onclick='wallet()' class='przycisk'/><br/>
+		<b id='napis'>Wynik</b><br/>
+		<script>
+			function wallet()
+			{
+				var kasa = document.getElementById('pln').value;
+				if(isNaN(kasa))
+				{
+				document.getElementById('napis').innerHTML='Podaj prawidłową wartość';
+				}
+				else if(kasa == '')
+				{
+				document.getElementById('napis').innerHTML='Podaj kwotę na koncie';
+				}
+				else if(kasa <= 0)
+				{
+				document.getElementById('napis').innerHTML='Saldo jest zbyt małe';
+				}
+				else
+				{
+				let btc = kasa / 28897.6295;
+				let eth = kasa / 672.44;
+				document.getElementById('napis').innerHTML='BTC = ' + btc +'<br/>' + 'ETH = ' + eth;
+				}
+			}
+			
+		</script>
+	</div>
+</body>
+</html>

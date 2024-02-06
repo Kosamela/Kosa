@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+	<meta charset='utf-8'/>
+	<title>Zegarek</title>
+	<link rel='stylesheet' href='style.css'.>
+	<script type='text/javascript'>
+		function zegarek()
+		{
+			let czas = new Date();
+			let sekunda = czas.getSeconds();
+			if (sekunda < 10){sekunda = '0'+sekunda}
+			let minuta = czas.getMinutes();
+			if (minuta < 10){minuta = '0'+minuta}
+			let godzina = czas.getHours();
+			if (godzina < 10){godzina = '0'+godzina}
+			setTimeout('zegarek()', 1000);
+			document.getElementById('zegar').innerHTML = godzina + ':' + minuta + ':' + sekunda;
+		}
+		zegarek();
+	</script>
+</head>
+<body>
+	<div id='zegar'></div>
+</body>
+</html>

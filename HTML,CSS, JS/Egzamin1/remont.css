@@ -1,0 +1,46 @@
+
+#logo
+{
+	background-color: #FFD5A2;
+	text-align: center;
+	padding: 20px;
+}
+.menu
+{
+	font-size: 150%;
+	text-align: center;
+	width: 25%;
+	background-color: #BF7011;
+	float: left;
+}
+.menu a{
+	text-decoration: none;
+	color: white;
+}
+#main{
+	height: 400px;
+}
+#main ul{
+	list-style-type: disc;
+}
+#main ol{
+	border: 1px  solid #000000;
+	width: 200px;
+}
+#footer{
+	background-color: #BF7011;
+	font-size: 150%;
+	text-align: right;
+	color: white;
+}
+.button{
+	background-color: #BF7011;
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+	border-style: outset;
+	border-radius: 15px;
+}
+.button:hover{
+	border-style: inset;
+}

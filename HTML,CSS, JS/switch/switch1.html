@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset='UTF-8'/>
+<title>Switch cz1</title>
+</head>
+<body>
+	<p>Podaj liczbe od 0 do 10: 
+	<input type='number' id='liczba'/></br></br>
+	<input type='button' value='Sprawdź' onclick='sprawdzajka()'/></br></br>
+	<b id='napis'/>
+	<script>
+		function sprawdzajka()
+		{
+			var liczba = document.getElementById('liczba').value;
+			liczba = parseInt(liczba);
+			/** W moim przypadku zparsowalem stringa w number, dlatego przypadki z case nie są w apostrofach. Gdybym nie zrobil powyzszego, musialbym wszystkie oznaczyc w "", bo typeof bhlby stringiem. 
+			alert(typeof(liczba)); **/
+			switch (liczba)
+			{
+				case 0:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 0';
+				break;
+				
+				case 1:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 1';
+				break;
+				
+				case 2:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 2';
+				break;
+				
+				case 3:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 3';
+				break;
+				
+				case 4:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 4';
+				break;
+				
+				case 5:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 5';
+				break;
+				
+				case 6:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 6';
+				break;
+				
+				case 7:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 7';
+				break;
+				
+				case 8:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 8';
+				break;
+				
+				case 9:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 9';
+				break;
+				
+				case 10:
+				document.getElementById('napis').innerHTML = 'Podales liczbe: 10';
+				break;
+				
+				default:
+				document.getElementById('napis').innerHTML = 'Podales poza zakresem';
+			}
+				
+		}
+		
+	</script>
+</body>
+</html>

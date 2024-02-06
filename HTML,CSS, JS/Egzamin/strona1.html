@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset='utf-8'/>
+<title>Działania matematyczne</title>
+<link rel='stylesheet' href='stylestrony.css'/>
+</head>
+<body>
+	<div id='container'>
+		<div id='baner'><a href='index.html'><img src='baner.jpg' alt='Tu powinno być logo' title='logo'/></a></div>
+		<div id='panel_lewy'>
+		<p>Menu</p>
+		<ul>
+		<li><a href='strona1.html' class='odnosnik'>proste działania</a></li>
+		<li><a href='strona2.html' class='odnosnik'>potegowanie</a></li>
+		</div>
+		<div id='panel_prawy1'>
+			<h1>PROSTE DZIAŁANIA</h1>
+			Podaj pierwszą liczbę: <input type='Number' id='pole1'/></br></br>
+			Podaj drugą liczbę: <input type='Number' id='pole2'/></br></br>
+			<input type='Button' value='DODAWANIE' onclick='dodawanie()'/>
+			<input type='Button' value='ODEJMOWANIE' onclick='odejmowanie()'/>
+			<input type='Button' value='MNOŻENIE' onclick='mnozenie()'/>
+			<input type='Button' value='DZIELENIE' onclick='dzielenie()'/></br></br>	
+			<b id='wynik'></b>
+		</div>
+		<div id='stopka'>
+		Kamil Kosmela <sup>&copy;</sup>
+		</div>
+		<script language = 'JavaScript'>
+			/* Probowalem z godzinę, nie mogę zapisać zmiennych przed funkcją. Jak tak robię i wykonuję dodawanie() wynik zawsze jest 
+			równy 0... zmienna poza funkcjami dodawalem oczywscie globalnie poprzez 'var'*/
+
+			function dodawanie()
+			{
+				let l1=document.getElementById("pole1").value;
+				let l2=document.getElementById("pole2").value;
+				if (l1 == '' || l2 == '') document.getElementById('wynik').innerHTML='Proszę uzupełnić obie liczby'
+				else
+				{
+					let wynikos = Number(l1)+Number(l2);
+					document.getElementById('wynik').innerHTML='Wynik dodawania to: '+ Number(wynikos);
+				}
+			}
+			
+			function odejmowanie()
+			{
+				let l1=document.getElementById("pole1").value;
+				let l2=document.getElementById("pole2").value;
+				if (l1 == '' || l2 == '') document.getElementById('wynik').innerHTML='Proszę uzupełnić obie liczby'
+				else
+				{
+					let wynikos = Number(l1)-Number(l2);
+					document.getElementById('wynik').innerHTML='Wynik odejmowania to: '+ wynikos;
+				}
+			}
+			
+			function mnozenie()
+			{
+				let l1=document.getElementById("pole1").value;
+				let l2=document.getElementById("pole2").value;
+				if (l1 == '' || l2 == '') document.getElementById('wynik').innerHTML='Proszę uzupełnić obie liczby'
+				else
+				{
+					let wynikos = Number(l1)*Number(l2);
+					document.getElementById('wynik').innerHTML='Wynik mnożenia to: '+ wynikos;
+				}
+			}
+			
+			function dzielenie()
+			{
+				let l1=document.getElementById("pole1").value;
+				let l2=document.getElementById("pole2").value;
+				if (l1 == '' || l2 == '') document.getElementById('wynik').innerHTML='Proszę uzupełnić obie liczby'
+				else
+				{	
+					if (l2 == '0') document.getElementById('wynik').innerHTML='Nie można dzielić przez 0!'
+					else
+					{
+						let wynikos = Number(l1)/Number(l2);
+						document.getElementById('wynik').innerHTML='Wynik dzielenia to: '+ wynikos;
+					}
+				}
+			}
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+#container{
+	width:1000px;
+	margin:auto;
+	background-color:silver;
+}
+#logo{
+	height:150px;
+	width:600px;
+}
+.menu{
+	background-color:white;
+	width:250px;
+	height:50px;
+	float:left;
+	text-align:center;
+	border:1px solid black;
+	box-sizing: border-box;
+	padding:15px; /* to byla walka, zanim zobaczylem tego line-height */
+}
+#news{
+	clear:both;
+	height:40px;
+	line-height:40px;
+	background-color:silver;
+}
+#hyper{
+	float:left;
+	width:250px;
+	min-height:450px;
+	background-color:grey;
+}
+#desc{
+	float:left;
+	width:500px;
+	min-height:450px;
+	background-color:white;
+}
+#adv{
+	float:left;
+	width:250px;
+	height:450px;
+	background-color:red;
+}
+#foot{
+	clear:both;
+	height:50px;
+	line-height:50px;
+	background-color:yellow;
+	text-align:center;
+}

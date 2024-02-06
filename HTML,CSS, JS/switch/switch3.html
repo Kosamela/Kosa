@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset='UTF-8'/>
+<title>Switch cz3</title>
+</head>
+<body>
+	Podaj dzien tygodnia: 
+	<input type='text' id='dzien'/></br></br>
+	<input type='button' value='Sprawdź' onclick='sprawdzajka()'/></br></br>
+	<b id='napis'/>
+	<script>
+		function sprawdzajka()
+		{
+			var dzien = document.getElementById('dzien').value;
+			dzien = dzien.toLowerCase();
+			switch (dzien)
+			{
+				case 'poniedzialek':
+				case 'poniedziałek':
+				case 'wtorek':
+				case 'sroda':
+				case 'środa':
+				case 'czwartek':
+				document.getElementById('napis').innerHTML = 'Do roboty leniu.';
+				break;
+				
+				case 'piatek':
+				case 'piątek':
+				document.getElementById('napis').innerHTML = 'W robocie, ale juz niedlugo.';
+				break;
+				
+				case 'sobota':				
+				case 'niedziela':
+				document.getElementById('napis').innerHTML = 'Nadgodziny w CKU?';
+				break;
+				
+				default:
+				document.getElementById('napis').innerHTML = 'Nie wprowadziles dnia tygodnia';
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<tittle>Kalendarz w JS</tittle>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+	function kalendarz()
+	{
+		let dane = new Date();
+		let data = dane.getDate();
+		if (data < 10){data = '0' + data}
+		let miesiac = dane.getMonth()+1;
+		if (miesiac < 10){miesiac = '0' + miesiac}
+		let rok = dane.getFullYear();
+		let czas = dane.toLocaleTimeString();
+		document.getElementById('demo').innerHTML = rok +"."+miesiac+"."+data+czas;
+	}
+	kalendarz();
+</script>
+</body>
+</html>

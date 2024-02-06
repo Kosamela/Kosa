@@ -1,0 +1,11 @@
+body
+{
+	margin: auto;
+}
+#zegar
+{
+	text-align: center;
+	font-size: 100px;
+	margin-top: auto;
+	line-height: 500px;
+}

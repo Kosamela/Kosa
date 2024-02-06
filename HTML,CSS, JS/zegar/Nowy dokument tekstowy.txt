@@ -1,0 +1,7 @@
+Praktycznie same zalety. Kod jest prostszy poprzez zastosowanie przypisanej funkcji zegarka z Date, poprzez co wizualnie i pamięciowo
+zajmuje mniej miejsca. Strona pewno też w milisekundach się szybciej załaduje z takim, bo nie będzie mielić tyllu zmiennych.
+Nie wiem jak tam z wywoływaniem funkcji z poziomu body, a po prostu wywołanie funkcji w skrypcie- jakie są dokładnie różnice w poborze
+pamięci. Również umieściłbym w skrypcie, zeby nie robić bałaganu w body.
+Jedynie wnioskując z poprzednich filmików, zamiast var użyłbym let, bo zmienne funkcjonują w obrębie lokalnym.
+Script umieściłbym również na koniec body,  nie wiem dlaczego p. Zelent umieścił go w head, według poprzednich filmików opóźnia 
+to ładowanie strony. (Jeżeli byłaby jakaś treść)

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+	<meta charset='utf-8'/>
+	<title>Wyremontuj mieszkanie</title>
+	<link rel='stylesheet' href='remont.css'/>
+</head>
+<body>
+	<div id='container'>
+		<header>
+			<div id='logo'>
+				<img src='logo.png'/>
+			</div>
+			<nav>
+				<div class='menu'><a href='index.html'>O NAS</a></div>
+				<div class='menu'><a href='kontakt.html'>KONTAKT</a></div>
+				<div class='menu'><a href='kalkulator.html'>KALKULATOR</a></div>
+				<div class='menu'><a href='http://www.jakremontowac.pl/' target='_blank'>POLECANE STRONY</a></div>
+			</nav>
+		</header>
+		<main>
+			<div id='main'>
+				<h1>Malowanie pokoju: 8 zł za m2</h1>
+				<p>Wymiary pokoju w metrach: <input type='number' id='pole1'/> <input type='Number' id='pole2'/></br></br>
+				<input type='button' value='OBLICZ KOSZT' onclick='skrypt()'/></br></br>
+				<a id='wynik'></b>
+			</div>
+		</main>
+		<footer>
+			<div id='footer'>
+				<p>AUTOR STRONY 94020502596</p>
+			</div>
+		</footer>
+	</div>
+	<script>
+		function skrypt(){
+			let jedna_sciana = document.getElementById('pole1').value;
+			let druga_sciana = document.getElementById('pole2').value;
+			let obliczonko = ((jedna_sciana * 2.7) + (druga_sciana * 2.7)) * 2;
+			let obliczonko_dwa = obliczonko * 8;
+			document.getElementById('wynik').innerHTML = 'Powierzchnia całkowita ścian: ' + obliczonko + '</br></br>' + 'Koszt malowania: ' + obliczonko_dwa + " zł.";
+		}
+	</script>
+</body>
+</html>

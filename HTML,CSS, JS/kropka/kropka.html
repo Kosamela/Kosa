@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='pl'>
+	<head>
+		<meta charset='utf-8'>
+		<title>Kolo</title>
+		<style>
+			.circle {
+				width: 50px;
+				height: 50px;
+				background-color: blue;
+				top: 50%;
+				left: 50%;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				transition: .3s linear;
+			}
+
+			.info {
+				font-size: 18px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class='circle'></div>
+		<div class='info'>Tekst</div>
+
+		<script>
+			const circle = document.querySelector(".circle");
+			const info = document.querySelector(".info");
+
+			const move = (e) => {
+				info.textContent = `wartość x: ${circle.offsetLeft}, wartość y: ${circle.offsetTop}`;
+				switch(e.keyCode) {
+					case 37: 
+						circle.style.left = circle.offsetLeft - 10 + "px";
+						break;
+					case 38:
+						circle.style.top = circle.offsetTop - 10 + "px";
+						break;
+					case 39: 
+						circle.style.left = circle.offsetLeft + 10 + "px";
+						break;
+					case 40:
+						circle.style.top = circle.offsetTop + 10 + "px";
+						break;
+					case 32:
+						const red = Math.floor(Math.random() * 256);
+						const green = Math.floor(Math.random() * 256);
+						const blue = Math.floor(Math.random() * 256);
+						circle.style.backgroundColor = "rgb(" + red + "," + green + "," + blue +")";
+				}
+			}
+			window.addEventListener("keydown", move)
+		</script>
+	</body>
+</html>

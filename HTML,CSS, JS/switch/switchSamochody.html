@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+<meta charset='UTF-8'/>
+<title>Switch samochody</title>
+</head>
+<body>
+	<p>Podaj swoją markę auta: 
+	<input type='text' id='marka'/></br></br>
+	<input type='button' value='Sprawdź' onclick='sprawdzajka()'/></br></br>
+	<b id='napis'/>
+	<script>
+		function sprawdzajka()
+		{
+			var marka = document.getElementById('marka').value;
+			marka = marka.toLowerCase();
+			switch (marka)
+			{
+				case 'renault':
+				document.getElementById('napis').innerHTML = 'Masz renóweczkę.';
+				break;
+				
+				case 'bmw':
+				document.getElementById('napis').innerHTML = 'Masz bmw.';
+				break;
+				
+				case 'mercedes':
+				document.getElementById('napis').innerHTML = 'Masz merola.';
+				break;
+				
+				case 'honda':
+				document.getElementById('napis').innerHTML = 'Masz honde.';
+				break;
+				
+				case 'opel':
+				document.getElementById('napis').innerHTML = 'Masz opla.';
+				break;
+				
+				case 'suzuki':
+				document.getElementById('napis').innerHTML = 'Masz suzi.';
+				break;
+				
+				case 'jeep':
+				document.getElementById('napis').innerHTML = 'Masz jeepa.';
+				break;
+				
+				default:
+				document.getElementById('napis').innerHTML = 'Brak samochodu w bazie danych.';
+			}
+		}
+	</script>
+</body>
+</html>

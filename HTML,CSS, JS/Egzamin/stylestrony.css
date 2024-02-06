@@ -1,0 +1,66 @@
+#container
+{
+	width:800px;
+	margin:auto;
+}
+a.odnosnik:link
+{
+	color: #66AA00;
+}
+p.dada
+{
+	font-size:14px;
+}
+#baner
+{
+	width:100%;
+	height:200px;
+}
+#panel_lewy
+{
+	background-color: #FFDA41;
+	border: 2px solid gray;
+	text-align: left;
+	width: 40%;
+	height: 400px;
+	float: left;
+	padding-left: 20px;
+	box-sizing:border-box;
+}
+#panel_prawy
+{
+	background-color: #FFE98F;
+	color: #0000EE;
+	border: 2px solid gray;
+	text-align: center;
+	box-sizing:border-box;
+	width:60%;
+	height: 400px; 
+	float: right;
+	padding: 20px;
+	line-height: 10px;
+}
+#panel_prawy1
+{
+	background-color: #FFE98F;
+	color: #000000;
+	border: 2px solid gray;
+	text-align: center;
+	box-sizing:border-box;
+	width:60%;
+	height: 400px; 
+	float: right;
+	padding: 20px;
+	line-height: 10px;
+}
+
+#stopka
+{
+	background-color: #FFDA41;
+	clear: both;
+	color: blue;
+	height: 40px;
+	line-height: 25px; /* Interlinia na 40px wyrównuje mi pod copyrights, 25px jest na oko, tak może być na tym egzaminie czychodzi o 40px? */
+	text-align: center;
+	border: 2px solid gray;
+}
