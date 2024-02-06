@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='pl'>
+<head>
+	<meta charset='UTF-8'/>
+	<title>Szkoly</title>
+	<link rel='stylesheet' href='style.css'/>
+</head>
+<body>
+	<noscript>Zatwierdz</noscript>
+	<script>
+		var szkola = prompt('Jesli chodziles do podstawowki, wpisz p, jezeli do gimnazjum, wpisz g, jezeli do liceum, wpisz l.');
+		szkola = szkola.toLowerCase(); //.toUpperCase()
+		if(szkola == 'p'){
+		window.open('https://pl.wikipedia.org/wiki/Szko%C5%82a_podstawowa', '_blank');
+		}
+		else if(szkola == 'g'){
+		window.open('https://pl.wikipedia.org/wiki/Gimnazjum', '_blank');
+		}
+		else if(szkola == 'l'){
+		window.open('https://pl.wikipedia.org/wiki/Liceum', '_blank');
+		}
+		else{
+		alert('Zaproponuje Ci teraz pacanie szkoly')
+		window.open('http://www.spisszkol.eu/typ/?wojewodztwo=kujawskopomorskie&powiat=torun', '_blank')
+		}
+	</script>
+</body>
+</html>
